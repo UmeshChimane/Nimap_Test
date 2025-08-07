@@ -10,10 +10,10 @@ Product Management App
 
 ##Steps to run the project:
 
-Clone repo
-Run: npm install
-Set up .env file with DB credentials
+-Clone repo
+-Run: npm install
+-Set up .env file with DB credentials
 
-Import SQL schema
-Run: node server.js
+-Import SQL schema
+-Run: node server.js
 
