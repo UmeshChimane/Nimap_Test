@@ -1,0 +1,13 @@
+<%- include('../nav') %>
+
+<div class="container mt-4">
+  <h2>Edit Category</h2>
+  <form action="/editcategory/<%= category.id %>" method="POST">
+    <div class="mb-3">
+      <label for="name" class="form-label">Category Name</label>
+      <input type="text" class="form-control" id="name" name="name" value="<%= category.name %>" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Update Category</button>
+    <a href="/viewcategories" class="btn btn-secondary">Cancel</a>
+  </form>
+</div>

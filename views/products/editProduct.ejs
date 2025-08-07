@@ -1,0 +1,21 @@
+<%- include('../nav') %>
+
+<div class="container mt-5">
+  <h3>Edit Product</h3>
+  <form action="/updateproduct/<%= product.productId %>" method="POST">
+    <div class="mb-3">
+      <label for="productName" class="form-label">Product Name</label>
+      <input type="text" name="productName" id="productName" class="form-control" value="<%= product.productName %>" required>
+    </div>
+    <div class="mb-3">
+      <label for="categoryId" class="form-label">Select Category</label>
+      <select name="categoryId" id="categoryId" class="form-select">
+        <% categories.forEach(cat => { %>
+          <option value="<%= cat.id %>" <%= cat.id === product.categoryId ? 'selected' : '' %>><%= cat.name %></option>
+        <% }) %>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-success">Update Product</button>
+    <a href="/viewproducts" class="btn btn-secondary">Cancel</a>
+  </form>
+</div>
